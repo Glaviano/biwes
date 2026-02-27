@@ -14,7 +14,8 @@ pip install biwes
 import numpy as np
 from biwes import BiWES, BiWES2, pre_compute, find_configurations
 
-# Create a simple bi-adjacency matrix
+# Create a simple bi-adjacency matrix.
+# The bia-adjacency matrix must contain only integers
 A = np.array([
     [2, 3, 0, 2, 0],
     [0, 1, 4, 0, 0],
@@ -40,8 +41,10 @@ strength_a = list(np.sum(A, axis=1))
 strength_b = list(np.sum(A, axis=0))
 degree_a = list(np.sum(np.where(A > 0, 1, 0), axis=1))
 degree_b = list(np.sum(np.where(A > 0, 1, 0), axis=0))
-matrici = find_configurations(strength_a, strength_b, degree_a, degree_b)
+solutions = find_configurations(strength_a, strength_b, degree_a, degree_b)
+#solutions is a list of bi-adjacency matrices
 ```
+
 
 
 
