@@ -34,7 +34,7 @@ A_rand2 = BiWES2(A2, weight_dict, weight_dict2, uw, uw2, adj_list, adj_list2, 1_
 #The functions BiWES and BiWES2 use numba, so the first call will be slow because
 ```
 
-# Enumerate all configurations with a given degree and strength sequences for a tiny graph
+## Enumerate all configurations with a given degree and strength sequences for a tiny graph
 
 ```python
 strength_a = list(np.sum(A, axis=1))
@@ -44,6 +44,7 @@ degree_b = list(np.sum(np.where(A > 0, 1, 0), axis=0))
 solutions = find_configurations(strength_a, strength_b, degree_a, degree_b)
 #solutions is a list of bi-adjacency matrices
 ```
+
 
 
 
