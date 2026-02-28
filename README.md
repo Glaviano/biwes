@@ -35,7 +35,7 @@ A_rand2 = BiWES2(A2, weight_dict, weight_dict2, uw, uw2, adj_list, adj_list2, 10
 ```
 
 ## Enumerate all configurations with a given degree and strength sequences for a tiny graph
-
+This function employs a brute-force algorithm to enumerate all possible bi-adjacency matrices while fixing the degree and strength sequences of a bipartite graph. The number of feasible configurations grows rapidly as the number of nodes and edges increases. For graphs with more than 15–16 nodes, the algorithm may not converge within a reasonable amount of time.
 ```python
 strength_a = list(np.sum(A, axis=1))
 strength_b = list(np.sum(A, axis=0))
@@ -44,6 +44,7 @@ degree_b = list(np.sum(np.where(A > 0, 1, 0), axis=0))
 solutions = find_configurations(strength_a, strength_b, degree_a, degree_b)
 #solutions is a list of bi-adjacency matrices
 ```
+
 
 
 
