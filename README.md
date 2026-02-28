@@ -29,7 +29,7 @@ A_rand = BiWES(A, 1000)
 
 # --- or reuse pre-computed structures for many runs ---
 A2, weight_dict, weight_dict2, adj_list, adj_list2, uw, uw2 = pre_compute(A)
-A_rand2 = BiWES2(A2, weight_dict, weight_dict2, uw, uw2, adj_list, adj_list2, 1_000)
+A_rand2 = BiWES2(A2, weight_dict, weight_dict2, uw, uw2, adj_list, adj_list2, 1000)
 
 #The functions BiWES and BiWES2 use numba, so the first call will be slow because
 ```
@@ -44,6 +44,7 @@ degree_b = list(np.sum(np.where(A > 0, 1, 0), axis=0))
 solutions = find_configurations(strength_a, strength_b, degree_a, degree_b)
 #solutions is a list of bi-adjacency matrices
 ```
+
 
 
 
