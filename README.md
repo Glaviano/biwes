@@ -31,7 +31,7 @@ A_rand = BiWES(A, 1000)
 A2, weight_dict, weight_dict2, adj_list, adj_list2, uw, uw2 = pre_compute(A)
 A_rand2 = BiWES2(A2, weight_dict, weight_dict2, uw, uw2, adj_list, adj_list2, 1000)
 
-#The functions BiWES and BiWES2 use numba, so the first call will be slow because
+#The functions BiWES and BiWES2 use numba, so the first call will be slow
 ```
 
 ## Enumerate all configurations with a given degree and strength sequences for a tiny graph
